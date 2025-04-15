@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAAMULAN 2025 Event Schedule</title>
+    <style>
+        :root {
+            --primary: #d9534f;
+            --secondary: #5bc0de;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --success: #5cb85c;
+            --warning: #f0ad4e;
+            --info: #5bc0de;
+            --purple: #9b59b6;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(rgba(255, 249, 240, 0.9), rgba(255, 249, 240, 0.9)), url('123.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-top: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary);
+        }
+        
+        .theme {
+            text-align: center;
+            font-style: italic;
+            color: var(--dark);
+            margin-bottom: 30px;
+            font-size: 1.2rem;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 0 10px rgba(0,0,0,0.05);
+            overflow: hidden;
+            border-radius: 8px;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+            transition: all 0.3s ease;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        
+        tr:hover {
+            background-color: rgba(217, 83, 79, 0.1);
+        }
+        
+        .date {
+            width: 15%;
+            font-weight: 600;
+        }
+        
+        .event {
+            width: 45%;
+        }
+        
+        .venue {
+            width: 40%;
+        }
+        
+        /* Event category colors */
+        .cultural { background-color: rgba(240, 173, 78, 0.1); }
+        .sports { background-color: rgba(92, 184, 92, 0.1); }
+        .music { background-color: rgba(91, 192, 222, 0.1); }
+        .food { background-color: rgba(217, 83, 79, 0.1); }
+        .exhibit { background-color: rgba(155, 89, 182, 0.1); }
+        .ritual { background-color: rgba(41, 128, 185, 0.1); }
+        
+        /* Legend */
+        .legend {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            gap: 15px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-right: 15px;
+        }
+        
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            margin-right: 8px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        table {
+            animation: fadeIn 0.5s ease-out;
+        }
+        footer {
+            background-color: #8B0000;
+            color: white;
+            padding: 15px 0;
+            margin-top: 0;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>KAAMULAN 2025</h1>
+        <p class="theme">Theme: Embracing Tradition: Innovating Culture for a Sustainable Future</p>
+        
+        <div class="legend">
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: rgba(240, 173, 78, 0.5);"></div>
+                <span>Cultural Events</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: rgba(92, 184, 92, 0.5);"></div>
+                <span>Sports</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: rgba(91, 192, 222, 0.5);"></div>
+                <span>Music/Entertainment</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: rgba(217, 83, 79, 0.5);"></div>
+                <span>Food Events</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: rgba(155, 89, 182, 0.5);"></div>
+                <span>Exhibits</span>
+            </div>
+            <div class="legend-item">
+                <div class="legend-color" style="background-color: rgba(41, 128, 185, 0.5);"></div>
+                <span>Rituals</span>
+            </div>
+        </div>
+
+        <h2>March Events</h2>
+        <table>
+            <tr>
+                <th class="date">Date</th>
+                <th class="event">Event</th>
+                <th class="venue">Venue</th>
+            </tr>
+            <tr class="sports">
+                <td>March 15-16</td>
+                <td>Kaamulan Badminton Tournament 2025</td>
+                <td>Malaybalay Badminton Center, Malaybalay City</td>
+            </tr>
+            <tr class="ritual">
+                <td>March 20</td>
+                <td>Catholic Mass</td>
+                <td>Centennial Stage, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="ritual">
+                <td>March 21</td>
+                <td>Pamukalag Ha Pangampo (Grand Opening Ritual)</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>March 21</td>
+                <td>Ribbon Cutting (Grand Opening Ceremony)</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>March 21-23</td>
+                <td>Ethnic Sports (Kag Alu-Alu)</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="exhibit">
+                <td>March 21 - April 23</td>
+                <td>Agri-Fair</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="exhibit">
+                <td>March 21 - April 23</td>
+                <td>Culture & Arts Exhibit</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="exhibit">
+                <td>March 21 - April 23</td>
+                <td>Bukidnon's Madagaya Pavilion</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="exhibit">
+                <td>March 21 - April 23</td>
+                <td>Garden Show</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="music">
+                <td>March 21</td>
+                <td>Kabataan Jam Reggae Night</td>
+                <td>Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>March 21 - April 12</td>
+                <td>Kaamulan Photography Contest</td>
+                <td>All venues during Kaamulan 2025 activities</td>
+            </tr>
+            <tr class="cultural">
+                <td>March 22</td>
+                <td>Kaamulan Slam</td>
+                <td>Kaamulan Open Theater, Kaamulan Grounds, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>March 22-23</td>
+                <td>Kaamulan Rodeo</td>
+                <td>ICEs Ground, Poblacion, Impasugong</td>
+            </tr>
+            <tr class="cultural">
+                <td>March 22 - April 12</td>
+                <td>Tabuk 4 Adventour Kultura ta Bukidnon</td>
+                <td>Bukidnon Touring</td>
+            </tr>
+            <tr class="cultural">
+                <td>March 23</td>
+                <td>Opening Salvo</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>March 23</td>
+                <td>Pyromusical Display (Fireworks)</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>March 24-29</td>
+                <td>Kaamulan Basketball Tournament 2025: 30 & Under</td>
+                <td>Opening at Lantapan, Championship on 29: Valencia</td>
+            </tr>
+            <tr class="cultural">
+                <td>March 28</td>
+                <td>Laga Daw Malaki ta Bukidnon Presentation</td>
+                <td>Kaamulan Open Theater, Kaamulan Grounds, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>March 28-30</td>
+                <td>National Dart Tournament</td>
+                <td>Kisolon, Sumilao</td>
+            </tr>
+            <tr class="music">
+                <td>March 28-29</td>
+                <td>Ethno Cultural Music Fest</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>March 29</td>
+                <td>Drum and Lyre Competition</td>
+                <td>Kaamulan Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>March 29</td>
+                <td>Kabataan Cheer Dance</td>
+                <td>Bukidnon State University</td>
+            </tr>
+            <tr class="sports">
+                <td>March 29-30</td>
+                <td>Chess Tournament</td>
+                <td>Kaamulan Open Theater, Kaamulan Grounds, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>March 29-30</td>
+                <td>1st Kaamulan Table Tennis Tournament</td>
+                <td>Robinsons Place, Valencia City</td>
+            </tr>
+            <tr class="ritual">
+                <td>March 31</td>
+                <td>Tribal Mass Wedding (Kag Asawaha)</td>
+                <td>Centennial Stage, Kaamulan Park, Malaybalay City</td>
+            </tr>
+        </table>
+
+        <h2>April Events</h2>
+        <table>
+            <tr>
+                <th class="date">Date</th>
+                <th class="event">Event</th>
+                <th class="venue">Venue</th>
+            </tr>
+            <tr class="sports">
+                <td>April 02</td>
+                <td>Kaamulan Motocross</td>
+                <td>San Jose, Malaybalay City</td>
+            </tr>
+            <tr class="food">
+                <td>April 03</td>
+                <td>Kaamulan Cookfest, Foodfest, and Lechon Festival</td>
+                <td>Centennial Backstage, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="food">
+                <td>April 04</td>
+                <td>Tilapia Festival</td>
+                <td>Centennial Backstage, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="food">
+                <td>April 04</td>
+                <td>Kaamulan Brewers League 2025</td>
+                <td>Kaamulan Open Theater, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>April 05</td>
+                <td>National Horse Show & Competition</td>
+                <td>Casisang Central Integrated School Grounds, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>April 06</td>
+                <td>Kape-Lagan: The Amazing Coffee Race 2025</td>
+                <td>Kaamulan Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>April 06</td>
+                <td>National Horse Show & Competition - Awarding Ceremony</td>
+                <td>Kaamulan Open Theater, Malaybalay City</td>
+            </tr>
+            <tr class="exhibit">
+                <td>April 04-06</td>
+                <td>Bonzai Show</td>
+                <td>Beside SP Building, Kaamulan Grounds, Malaybalay City</td>
+            </tr>
+            <tr class="exhibit">
+                <td>April 04-06</td>
+                <td>5th National Actual Goldfish Show</td>
+                <td>Kaamulan Open Theater, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>April 05-06</td>
+                <td>1st Kaamulan Pickleball Cup</td>
+                <td>Kibawe Municipal Dome and Kibawe Tennis Court, Kibawe</td>
+            </tr>
+            <tr class="sports">
+                <td>April 05-06</td>
+                <td>3rd Governor Rogelio Niel P. Roque Obstacle Course Race</td>
+                <td>Mangima Spring Resort and Bike Park, Manolo Fortich</td>
+            </tr>
+            <tr class="music">
+                <td>April 05</td>
+                <td>Kaamulan Jam: Awit ng Tanghalan Kaamulan Edition</td>
+                <td>Centennial Stage, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>April 06</td>
+                <td>3rd Kaamulan Enduro Bike Challenge 2025</td>
+                <td>Mangima Spring Resort and Bike Park, Manolo Fortich</td>
+            </tr>
+            <tr class="music">
+                <td>April 06</td>
+                <td>SMB Night</td>
+                <td>Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>April 09-10</td>
+                <td>4th Kaamulan Festival Intermunicipality Mobile Legends Tournament 2025</td>
+                <td>Kaamulan Open Theater, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="food">
+                <td>April 10</td>
+                <td>Traditional Indigenous Cooking Show</td>
+                <td>Kaamulan Ground, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="ritual">
+                <td>April 11</td>
+                <td>Panalawhig Ha Pangampo (Ritual)</td>
+                <td>Panalawhig Creek, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>April 11</td>
+                <td>Piniliyapan: A Glimpse of Bukidnon</td>
+                <td>Kaamulan Open Theater, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="ritual">
+                <td>April 12</td>
+                <td>Pamalabag Ha Pangampo (Ritual)</td>
+                <td>Old Pine Hills Hotel, Sayre Highway, Sumpong, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>April 12</td>
+                <td>Kaamulan Street Dancing Competition and Parade of the 7 Ethnic Tribes</td>
+                <td>Old Pine Hills Hotel, Sayre Highway to Kaamulan Grounds</td>
+            </tr>
+            <tr class="cultural">
+                <td>April 12</td>
+                <td>Kaamulan Photography Contest (Street Dancing Category)</td>
+                <td>Old Pine Hills Hotel, Sayre Highway to Kaamulan Grounds</td>
+            </tr>
+            <tr class="sports">
+                <td>April 12</td>
+                <td>Kaamulan Duathlon Challenge 2025</td>
+                <td>BRCI, Dicklum, Manolo Fortich</td>
+            </tr>
+            <tr class="sports">
+                <td>April 12</td>
+                <td>Kaamulan Bukidnon Physique and Body Building Competition</td>
+                <td>Brgy. 6, Covered Court, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>April 12</td>
+                <td>Kaamulan Photography Contest Awarding</td>
+                <td>Centennial Stage, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="music">
+                <td>April 12</td>
+                <td>Bukidnon Local Bands</td>
+                <td>Kaamulan Ground, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="music">
+                <td>April 12</td>
+                <td>Black Out Party</td>
+                <td>Kaamulan Open Theater, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>April 12-13</td>
+                <td>Kaamulan Inter Cities/Municipalities Tennis Competition</td>
+                <td>Tresort Emmanuel Resort, Bukidnon Tennis Academy, Kalasungay, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>April 12</td>
+                <td>2025 SMART MVPSF Region-X-B New Face Taekwondo Championships</td>
+                <td>SAIT Gymnasium, Valencia City</td>
+            </tr>
+            <tr class="cultural">
+                <td>April 12</td>
+                <td>TABUK 4 Adventur Kultura ta Bukidnon Motorcycle Display and Drive-Testing</td>
+                <td>Kaamulan Open Theater Parking Lot, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>April 13</td>
+                <td>TABUK 4 Adventur Kultura Ta Bukidnon Awarding</td>
+                <td>Kaamulan Open Theater, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="music">
+                <td>April 13</td>
+                <td>Celebrity Night (TJ Monterde & KZ Tandingan)</td>
+                <td>Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="cultural">
+                <td>April 13</td>
+                <td>Pyromusical Display (Fireworks)</td>
+                <td>Capitol Grounds, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>April 15-18</td>
+                <td>Bukidnon International Marathon Race Kit/Pack Releasing</td>
+                <td>Centennial Stage, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>April 19</td>
+                <td>Bukidnon International Marathon Assembly</td>
+                <td>Kaamulan Open Theater, Kaamulan Park, Malaybalay City</td>
+            </tr>
+            <tr class="sports">
+                <td>April 20</td>
+                <td>Bukidnon International Marathon Race Day</td>
+                <td>Kaamulan Open Theater, Kaamulan Park, Malaybalay City</td>
+            </tr>
+        </table>
+    </div>
+    <footer>
+        <p>&copy; 2025 Kaamulan Festival. All rights reserved.</p>
+    </footer>
+</body>

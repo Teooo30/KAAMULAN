@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaamulan Festival - Documentary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #8B0000;
+            --secondary: #FFD700;
+            --light: #FFF9F0;
+            --dark: #1A1A1A;
+            --text: #333333;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text);
+            line-height: 1.7;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('123.jpg') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+        }
+        
+        .hero {
+            height: 60vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            padding: 0 20px;
+        }
+        
+        .hero h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin: 0;
+            color: white;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+            animation: fadeIn 1.5s ease-out;
+            letter-spacing: 2px;
+        }
+        
+        .documentary-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+        }
+        
+        .documentary {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 50px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .documentary:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+        }
+        
+        .documentary:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+        
+        .documentary img {
+            width: 50%;
+            height: 400px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            filter: grayscale(20%);
+        }
+        
+        .documentary:hover img {
+            transform: scale(1.05);
+            filter: grayscale(0%);
+        }
+        
+        .text {
+            width: 50%;
+            padding: 40px;
+        }
+        
+        .text h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .text h3::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .text p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            color: var(--text);
+        }
+        
+        footer {
+            background-color: rgba(139, 0, 0, 0.9);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            margin-top: 50px;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        .documentary:nth-child(odd) {
+            animation: slideIn 1s ease-out;
+        }
+        
+        .documentary:nth-child(even) {
+            animation: slideIn 1s ease-out;
+        }
+        
+        @media (max-width: 992px) {
+            .hero h2 {
+                font-size: 2.5rem;
+                padding: 15px 30px;
+            }
+            
+            .documentary {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .documentary:nth-child(even) {
+                flex-direction: column;
+            }
+            
+            .documentary img, .text {
+                width: 100%;
+            }
+            
+            .documentary img {
+                height: 300px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+                padding: 10px 20px;
+            }
+            
+            .text h3 {
+                font-size: 1.5rem;
+            }
+            
+            .text p {
+                font-size: 1rem;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h2>Experience the Rich Culture of Bukidnon</h2>
+    </div>
+
+    <div class="documentary-container">
+        <div class="documentary">
+            <img src="images1.jpg" alt="Tribal Gathering">
+            <div class="text">
+                <h3>The Gathering of Tribes</h3>
+                <p>The Kaamulan Festival is a time of great significance for the seven tribes of Bukidnon. It is a moment of unity, where the elders, youth, and community members come together to celebrate their heritage through storytelling, music, and dance.</p>
+            </div>
+        </div>
+
+        <div class="documentary">
+            <img src="images2.jpg" alt="Traditional Dance">
+            <div class="text">
+                <h3>Traditional Dances and Rituals</h3>
+                <p>One of the most anticipated events of the festival is the showcase of traditional dances. These performances, passed down through generations, tell stories of tribal life, courtship, and even historical battles.</p>
+            </div>
+        </div>
+
+        <div class="documentary">
+            <img src="images3.jpg" alt="Colorful Costumes">
+            <div class="text">
+                <h3>The Colors of Kaamulan</h3>
+                <p>The vibrant costumes of the festival are deeply symbolic, with intricate patterns and beadwork representing the different tribes. Each tribe wears distinct colors, showcasing their unique identity.</p>
+            </div>
+        </div>
+
+        <div class="documentary">
+            <img src="images4.jpg" alt="Horse Fight Event">
+            <div class="text">
+                <h3>Horse Fighting: A Cultural Tradition</h3>
+                <p>Horse fighting is an old tradition among the Bukidnon tribes, symbolizing strength and bravery. This event, though controversial, remains an important part of the festival, reflecting the warrior spirit of the indigenous people.</p>
+            </div>
+        </div>
+
+        <div class="documentary">
+            <img src="images5.jpg" alt="Thanksgiving Ritual">
+            <div class="text">
+                <h3>The Ritual of Thanksgiving</h3>
+                <p>A sacred ritual is held to offer thanks to the spirits and ancestors. Tribal leaders conduct prayers, offering fruits, rice, and animals in a ceremonial gathering that blesses the land and its people.</p>
+            </div>
+        </div>
+
+        <div class="documentary">
+            <img src="image6.jpg" alt="Grand Parade">
+            <div class="text">
+                <h3>A Grand Parade of Cultures</h3>
+                <p>The Kaamulan Festival concludes with a grand parade where the different tribes showcase their traditional clothing, music, and dances. It is a spectacle of unity, culture, and pride for the people of Bukidnon.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Kaamulan Festival. All rights reserved.</p>
+            <div class="social-links">
+              
+        </div>
+
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
